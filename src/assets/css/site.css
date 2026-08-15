@@ -1,0 +1,28 @@
+#app, div, li, p, span {
+ font-family: Microsoft JhengHei, Helvetica, Arial, sans-serif;
+}
+
+body {
+ margin: 0;
+}
+
+/* 讓頁尾在內容不足時仍貼齊視窗底部 */
+#app {
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+}
+
+#app > .container {
+ flex: 1 0 auto;
+}
+
+.container {
+ max-width: 1200px;
+ width: 100%;
+ margin: 0 auto;
+}
+
+.page-content {
+ padding: 10px 30px;
+}
