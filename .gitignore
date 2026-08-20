@@ -1,0 +1,8 @@
+node_modules
+dist
+
+# Visual Studio
+.vs/
+
+# macOS
+.DS_Store
