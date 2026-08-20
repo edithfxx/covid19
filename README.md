@@ -8,6 +8,10 @@
 | **版本** | 0.1.0 |
 | **狀態** | 已封存，不再維護 |
 
+## 線上 Demo
+
+**▶️ https://edithfxx.github.io/covid19/**
+
 ---
 
 ## 功能
@@ -43,7 +47,8 @@
 
 ## 環境需求
 
-> **重要：必須使用 Node.js 16 或以下版本。**
+> **開發（`npm run serve`）需使用 Node.js 16 或以下版本。**
+> 建置與部署（`npm run build` / `npm run deploy`）不受此限 —— 見下方說明。
 
 `@vue/cli-service` 4.5 底層為 webpack 4，依賴 Node 17+ 之後被 OpenSSL 3 移除的舊雜湊演算法。在 Node 17 以上執行會直接失敗：
 
@@ -70,7 +75,9 @@ node -v   # 應為 v16.x
 NODE_OPTIONS=--openssl-legacy-provider npm run serve
 ```
 
-這是繞過而非修復，webpack 4 在新版 Node 下仍可能有其他非預期行為，建議優先切換至 Node 16。
+這是繞過而非修復，webpack 4 在新版 Node 下仍可能有其他非預期行為，開發時建議優先切換至 Node 16。
+
+> `npm run deploy` 已內建此旗標，部署時不需額外處理。
 
 </details>
 
@@ -98,6 +105,7 @@ npm run serve
 ```bash
 npm run build   # 建置正式版，輸出至 dist/
 npm run lint    # ESLint 檢查並自動修正
+npm run deploy  # 建置後發布至 gh-pages 分支（GitHub Pages）
 ```
 
 ---
